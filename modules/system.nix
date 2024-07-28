@@ -128,6 +128,7 @@
     spotify
     postman
     mongodb-compass
+    obsidian
   ];
 
   environment.variables.EDITOR = "nvim";
