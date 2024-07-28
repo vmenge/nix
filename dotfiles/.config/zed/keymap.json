@@ -1,0 +1,31 @@
+[
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "space e": "zed::OpenKeymap", // matches ⌘-k then ⌘-s
+      "bindings": {
+        "shift-s": [
+          "vim::PushOperator",
+          {
+            "AddSurrounds": {}
+          }
+        ]
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "TabSwitcher",
+    "bindings": {
+      "ctrl-k": "menu::SelectPrev",
+      "ctrl-j": "menu::SelectNext",
+    }
+  },
+]

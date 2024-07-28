@@ -1,0 +1,25 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 11
+
+[font.bold]
+family = "BerkeleyMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "BerkeleyMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "BerkeleyMono Nerd Font"
+style = "Regular"
+
+[shell]
+args = ["-l", "-c", "/home/vmenge/.config/alacritty/tmux.sh"]
+program = "zsh"
+
+[window]
+option_as_alt = "Both"
+opacity = 0.9
