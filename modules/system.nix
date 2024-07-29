@@ -129,6 +129,7 @@
     obsidian
     grim # screenshot
     slurp # select region and output to stdout
+    pavucontrol
   ];
 
   environment.variables.EDITOR = "nvim";
