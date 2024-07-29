@@ -66,6 +66,9 @@
     ".config/i3".source = ../dotfiles/.config/i3;
     ".config/i3".recursive = true;
 
+    ".config/mako".source = ../dotfiles/.config/mako;
+    ".config/mako".recursive = true;
+
     ".config/rofi".source = ../dotfiles/.config/rofi;
     ".config/rofi".recursive = true;
 

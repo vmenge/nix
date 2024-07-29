@@ -1,0 +1,5 @@
+font = BerkeleyMono Nerd Font 10
+background-color = #000000
+text-color = #FFFFFF
+border-color = #FFFFFF
+default-timeout = 30000
