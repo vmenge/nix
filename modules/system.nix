@@ -100,7 +100,6 @@
     kubectl # A command line tool for communicating with a Kubernetes API server
     rofi-wayland # A window switcher, application launcher and dmenu replacement
     neofetch # A CLI system information tool written in BASH that supports displaying images.
-    dunst # Customizable and lightweight notification-daemon
     mold # A modern linker
     asdf-vm # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
     p7zip # Command-line file archiver with high compression ratio
@@ -132,6 +131,8 @@
     pavucontrol
     pkg-config # A tool that allows packages to find out information about other packages (wrapper script)
     libsodium # A modern and easy-to-use crypto library
+    mako # Notification system
+    libnotify # Send notifications to notification daemon
   ];
 
   environment.variables.EDITOR = "nvim";

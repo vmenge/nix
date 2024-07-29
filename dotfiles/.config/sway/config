@@ -3,6 +3,8 @@
 #######################
 # wallpaper management
 exec swww-daemon 
+# notifications daemon
+exec mako
 
 #######################
 # config starts here: #
@@ -17,6 +19,7 @@ font pango: BerkeleyMono Nerd Font 10
 # set the mod key to the winkey:
 set $mod Mod4
 
+#####################
 # workspace layout: #
 #####################
 
