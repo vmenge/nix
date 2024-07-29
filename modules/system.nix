@@ -53,8 +53,6 @@
     home-manager
     bash
     pciutils # A collection of programs for inspecting and manipulating configuration of PCI devices
-    # pulseaudio
-    # pavucontrol
     lsof # A tool to list open files
     wl-clipboard # stdin / stdout clipboard
     atool
@@ -129,6 +127,8 @@
     postman
     mongodb-compass
     obsidian
+    grim # screenshot
+    slurp # select region and output to stdout
   ];
 
   environment.variables.EDITOR = "nvim";

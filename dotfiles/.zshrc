@@ -4,7 +4,7 @@ ZSH_THEME="agnoster"
 plugins=(git)
 
 changebg() {
-  feh --bg-fill --randomize ~/.wallpaper/*
+  bash ~/.scripts/wallpaper.sh
 }
 
 toggle_turbo() {
@@ -60,6 +60,7 @@ function nixgc() {
 function _yazi_shortuct() {
   yazi
 }
+
 zle -N _yazi_shortuct
 bindkey '^E' _yazi_shortuct
 
@@ -70,6 +71,26 @@ load_dotenv
 
 teleport_login() {
   tsh login --proxy=teleport-cluster.orb.internal-tools.worldcoin.dev --auth=okta
+}
+
+screenshot() {
+}
+
+sshot() {
+  while [[ "$#" -gt 0 ]]; do
+      case $1 in
+          -r|--region)
+              region_flag=true
+              ;;
+      esac
+      shift
+  done
+
+  if $region_flag; then
+    grim -g "$(slurp)" - | wl-copy
+  else
+    grim - | wl-copy
+  fi
 }
 
 lock() {
@@ -86,6 +107,10 @@ lock() {
     --separator-color 00000000 \
     --grace 0 \
     --fade-in 0.1
+}
+
+sus() {
+  lock & systemctl suspend
 }
 
 # fnm

@@ -4,6 +4,5 @@ echo "No files found in $HOME/.wallpaper"
 exit 1
 fi
 random_file="${files[RANDOM % ${#files[@]}]}"
-echo GOT
-echo $random_file
+echo changing wallpaper to $random_file
 swww img $random_file
