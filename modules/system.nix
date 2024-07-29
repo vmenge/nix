@@ -130,6 +130,7 @@
     grim # screenshot
     slurp # select region and output to stdout
     pavucontrol
+    pkg-config # A tool that allows packages to find out information about other packages (wrapper script)
   ];
 
   environment.variables.EDITOR = "nvim";
