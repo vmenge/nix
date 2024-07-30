@@ -26,7 +26,7 @@
   users.users.vmenge = {
     isNormalUser = true;
     description = "Victor Menge";
-    extraGroups = [ "networkmanager" "wheel" "audio" "video" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "docker" ];
     shell = pkgs.zsh;
   };
 
@@ -133,6 +133,11 @@
     libsodium # A modern and easy-to-use crypto library
     mako # Notification system
     libnotify # Send notifications to notification daemon
+    wdisplays # A graphical application for configuring displays in Wayland compositors
+    zoom-us
+    displaylink
+    usbutils
+    vagrant
   ];
 
   environment.variables.EDITOR = "nvim";
@@ -172,6 +177,14 @@
     ];
   };
 
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
   fonts = {
     fontDir = {
       enable = true;
@@ -200,4 +213,5 @@
   #
   services.devmon.enable = true;
   services.dbus.enable = true;
+  services.avahi.enable = true;
 }

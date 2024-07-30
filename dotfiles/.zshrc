@@ -74,7 +74,8 @@ teleport_login() {
   tsh login --proxy=teleport-cluster.orb.internal-tools.worldcoin.dev --auth=okta
 }
 
-screenshot() {
+avahi() {
+  avahi-resolve -4 --name $1 | awk '{print $2}'
 }
 
 sshot() {
