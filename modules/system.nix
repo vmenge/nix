@@ -26,10 +26,12 @@
   users.users.vmenge = {
     isNormalUser = true;
     description = "Victor Menge";
-    extraGroups = [ "networkmanager" "wheel" "audio" "video" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "docker" "libvirtd" "qemu-libvirtd" ];
     shell = pkgs.zsh;
   };
 
+  security.polkit.enable = true;
+  #
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -50,6 +52,10 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    xdg-desktop-portal
+    xdg-desktop-portal-wlr
+    xdg-desktop-portal-gtk
+    wlroots
     home-manager
     bash
     pciutils # A collection of programs for inspecting and manipulating configuration of PCI devices
@@ -177,6 +183,12 @@
     ];
   };
 
+  programs.dconf.enable = true; # virt-manager requires dconf to remember settings
+  programs.virt-manager.enable = true;
+  boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.libvirtd.enable = true;
   virtualisation.docker = {
     enable = true;
     rootless = {
@@ -184,6 +196,8 @@
       setSocketVariable = true;
     };
   };
+  users.extraGroups.vboxusers.members = [ "vmenge" ];
+
 
   fonts = {
     fontDir = {

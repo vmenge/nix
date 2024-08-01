@@ -109,7 +109,8 @@
   #  /etc/profiles/per-user/vmenge/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
+    XDG_CURRENT_DESKTOP = "sway"; 
   };
 
   programs.git = {
